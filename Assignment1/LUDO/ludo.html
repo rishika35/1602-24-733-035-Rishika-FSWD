@@ -1,1 +1,105 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ludo-board">
+    <!-- TOP-LEFT: GREEN HOME -->
+    <div class="home green-home">
+        <div class="home-outer-border">
+            <div class="home-inner">
+                <div class="token green-token"></div>
+                <div class="token green-token"></div>
+                <div class="token green-token"></div>
+                <div class="token green-token"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP PATH (3 Columns x 6 Rows) -->
+    <div class="path vertical-path">
+        <div></div><div></div><div></div>
+        <div></div><div class="yellow-bg"></div><div class="star-cell yellow-star">★</div>
+        <div class="star-cell yellow-star">★</div><div class="yellow-bg"></div><div></div>
+        <div></div><div class="yellow-bg"></div><div></div>
+        <div></div><div class="yellow-bg"></div><div></div>
+        <div></div><div class="yellow-bg"></div><div></div>
+    </div>
+
+    <!-- TOP-RIGHT: YELLOW HOME -->
+    <div class="home yellow-home">
+        <div class="home-outer-border">
+            <div class="home-inner">
+                <div class="token yellow-token"></div>
+                <div class="token yellow-token"></div>
+                <div class="token yellow-token"></div>
+                <div class="token yellow-token"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LEFT PATH (6 Columns x 3 Rows) -->
+    <div class="path horizontal-path">
+        <div></div><div class="star-cell green-star">★</div><div></div><div></div><div></div><div></div>
+        <div class="green-bg"></div><div class="green-bg"></div><div class="green-bg"></div><div class="green-bg"></div><div class="green-bg"></div><div class="green-bg"></div>
+        <div></div><div></div><div class="star-cell green-star">★</div><div></div><div></div><div></div>
+    </div>
+
+    <!-- CENTER (3x3 Grid Divided Into 4 Triangles) -->
+    <div class="center">
+        <div class="triangle green-triangle"></div>
+        <div class="triangle yellow-triangle"></div>
+        <div class="triangle blue-triangle"></div>
+        <div class="triangle red-triangle"></div>
+    </div>
+
+    <!-- RIGHT PATH (6 Columns x 3 Rows) -->
+    <div class="path horizontal-path">
+        <div></div><div></div><div></div><div class="star-cell blue-star">★</div><div></div><div></div>
+        <div class="blue-bg"></div><div class="blue-bg"></div><div class="blue-bg"></div><div class="blue-bg"></div><div class="blue-bg"></div><div class="blue-bg"></div>
+        <div></div><div></div><div></div><div></div><div class="star-cell blue-star">★</div><div></div>
+    </div>
+
+    <!-- BOTTOM-LEFT: RED HOME -->
+    <div class="home red-home">
+        <div class="home-outer-border">
+            <div class="home-inner">
+                <div class="token red-token"></div>
+                <div class="token red-token"></div>
+                <div class="token red-token"></div>
+                <div class="token red-token"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM PATH (3 Columns x 6 Rows) -->
+    <div class="path vertical-path">
+        <div></div><div class="red-bg"></div><div></div>
+        <div></div><div class="red-bg"></div><div></div>
+        <div></div><div class="red-bg"></div><div></div>
+        <div></div><div class="red-bg"></div><div></div>
+        <div></div><div class="red-bg"></div><div class="star-cell red-star">★</div>
+        <div class="star-cell red-star">★</div><div class="red-bg"></div><div></div>
+    </div>
+
+    <!-- BOTTOM-RIGHT: BLUE HOME -->
+    <div class="home blue-home">
+        <div class="home-outer-border">
+            <div class="home-inner">
+                <div class="token blue-token"></div>
+                <div class="token blue-token"></div>
+                <div class="token blue-token"></div>
+                <div class="token blue-token"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
