@@ -1,1 +1,175 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e0e0;
+}
+
+/* MAIN BOARD CONTAINER: EXACT 6:3:6 RATIO (15x15 GRID) */
+.ludo-board {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 6fr 3fr 6fr;
+    grid-template-rows: 6fr 3fr 6fr;
+    border: 3px solid #111;
+    background-color: #fff;
+}
+
+/* HOME CORNERS */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #111;
+}
+
+.green-home  { background-color: #0f9d58; }
+.yellow-home { background-color: #f4b400; }
+.red-home    { background-color: #db4437; }
+.blue-home   { background-color: #4285f4; }
+
+/* HOME INNER WHITE BOX WITH DOUBLE BORDER EFFECT */
+.home-outer-border {
+    width: 78%;
+    height: 78%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-inner {
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* TOKENS */
+.token {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.green-token  { background-color: #0f9d58; }
+.yellow-token { background-color: #f4b400; }
+.red-token    { background-color: #db4437; }
+.blue-token   { background-color: #4285f4; }
+
+/* PATH TRACKS */
+.path {
+    display: grid;
+    border: 1px solid #111;
+}
+
+.vertical-path {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.horizontal-path {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.path > div {
+    border: 1px solid #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* TRACK COLORED LANES */
+.green-bg  { background-color: #0f9d58 !important; }
+.yellow-bg { background-color: #f4b400 !important; }
+.red-bg    { background-color: #db4437 !important; }
+.blue-bg   { background-color: #4285f4 !important; }
+
+/* STAR TILES WITH CIRCULAR BADGES MATCHING REFERENCE */
+.star-cell {
+    position: relative;
+    font-size: 0;
+}
+
+.star-cell::before {
+    content: "★";
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green-star::before {
+    background-color: #0f9d58;
+    color: #fff;
+}
+
+.yellow-star::before {
+    background-color: #f4b400;
+    color: #fff;
+}
+
+.red-star::before {
+    background-color: #db4437;
+    color: #fff;
+}
+
+.blue-star::before {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+/* CENTER TRIANGLES (3x3 AREA) */
+.center {
+    position: relative;
+    border: 1px solid #111;
+    background-color: #fff;
+}
+
+.triangle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.green-triangle {
+    background-color: #0f9d58;
+    clip-path: polygon(0 0, 50% 50%, 0 100%);
+}
+
+.yellow-triangle {
+    background-color: #f4b400;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+
+.blue-triangle {
+    background-color: #4285f4;
+    clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+}
+
+.red-triangle {
+    background-color: #db4437;
+    clip-path: polygon(0 100%, 100% 100%, 50% 50%);
+}
