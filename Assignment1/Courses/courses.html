@@ -1,1 +1,69 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorized Course Lists</title>
+</head>
+
+<body>
+
+    <h2>Categorized Course Lists</h2>
+
+    <!-- Programming Languages -->
+    <h3>Programming Languages</h3>
+
+    <label for="programming">Select a Programming Language:</label>
+
+    <select id="programming" name="programming">
+        <option value="">-- Select --</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+    </select>
+
+
+    <br><br>
+
+
+    <!-- Data Structures -->
+    <h3>Data Structures</h3>
+
+    <label for="datastructures">Select a Data Structure:</label>
+
+    <select id="datastructures" name="datastructures">
+        <option value="">-- Select --</option>
+        <option value="array">A. Array</option>
+        <option value="linked-list">B. Linked List</option>
+        <option value="stack">C. Stack</option>
+        <option value="queue">D. Queue</option>
+    </select>
+
+
+    <br><br>
+
+
+    <!-- Software Engineering Topics -->
+    <h3>Software Engineering Topics</h3>
+
+    <label for="software">Search a Topic:</label>
+
+    <input list="software-topics"
+           id="software"
+           name="software"
+           placeholder="Type or select a topic">
+
+    <datalist id="software-topics">
+        <option value="101. SDLC">
+        <option value="102. Agile Model">
+        <option value="103. Waterfall Model">
+        <option value="104. UML Diagrams">
+        <option value="105. Testing Techniques">
+    </datalist>
+
+</body>
+
+</html>
