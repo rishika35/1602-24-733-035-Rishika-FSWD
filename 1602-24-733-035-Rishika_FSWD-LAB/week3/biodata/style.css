@@ -1,0 +1,457 @@
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f6f9;
+
+    color: #222;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+    width: 850px;
+
+    max-width: 95%;
+
+    margin: 25px auto;
+
+    background-color: white;
+
+    border: 1px solid #d9dee5;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    min-height: 155px;
+
+    background-color: #142440;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 25px 30px;
+}
+
+
+/* =====================================================
+   PROFILE PHOTO
+===================================================== */
+
+.profile-photo {
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background-color: #f7f7f7;
+
+    border: 2px solid #5cc4c0;
+
+    flex-shrink: 0;
+}
+
+
+/* Image inside the circle */
+
+.profile-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   HEADER INFORMATION
+===================================================== */
+
+.header-info {
+    margin-left: 25px;
+}
+
+.header-info h1 {
+    font-size: 23px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+.header-info p {
+    font-size: 10px;
+
+    margin-bottom: 12px;
+
+    color: #d8e0ed;
+}
+
+
+/* =====================================================
+   HEADER BUTTONS
+===================================================== */
+
+.header-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.header-buttons a {
+    text-decoration: none;
+
+    color: white;
+
+    background-color: #253a5c;
+
+    border: 1px solid #5c718e;
+
+    border-radius: 12px;
+
+    padding: 5px 10px;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+    padding: 17px 30px 5px 30px;
+}
+
+
+/* Section headings */
+
+.section h2 {
+    font-size: 12px;
+
+    color: #173b5c;
+
+    border-left: 3px solid #38aaa7;
+
+    padding-left: 7px;
+
+    margin-bottom: 12px;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =====================================================
+   PERSONAL DETAILS
+===================================================== */
+
+.details {
+    width: 100%;
+}
+
+.detail-row {
+    display: flex;
+
+    min-height: 28px;
+
+    align-items: center;
+
+    border-bottom: 1px solid #d9dee5;
+}
+
+
+/* Left side labels */
+
+.label {
+    width: 150px;
+
+    color: #4c6880;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/* Right side values */
+
+.value {
+    color: #444;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   EDUCATION TABLE
+===================================================== */
+
+.education-table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+/* Table heading */
+
+.education-table th {
+    background-color: #142440;
+
+    color: white;
+
+    text-align: left;
+
+    padding: 8px 9px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* Table cells */
+
+.education-table td {
+    padding: 9px;
+
+    border-bottom: 1px solid #dce1e7;
+
+    font-size: 9px;
+
+    color: #4b4b4b;
+}
+
+
+/* Hover effect */
+
+.education-table tr:hover {
+    background-color: #f8fafc;
+}
+
+
+/* Column widths */
+
+.education-table th:nth-child(1),
+.education-table td:nth-child(1) {
+    width: 23%;
+}
+
+.education-table th:nth-child(2),
+.education-table td:nth-child(2) {
+    width: 40%;
+}
+
+.education-table th:nth-child(3),
+.education-table td:nth-child(3) {
+    width: 18%;
+}
+
+.education-table th:nth-child(4),
+.education-table td:nth-child(4) {
+    width: 19%;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    padding-bottom: 5px;
+}
+
+
+/* Individual skill */
+
+.skill {
+    display: inline-block;
+
+    padding: 5px 11px;
+
+    border-radius: 12px;
+
+    background-color: #eef8f8;
+
+    border: 1px solid #b9dddd;
+
+    color: #266e70;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   HOBBIES
+===================================================== */
+
+.hobbies {
+    padding-left: 17px;
+
+    padding-bottom: 5px;
+}
+
+.hobbies li {
+    margin-bottom: 7px;
+
+    color: #4b4b4b;
+
+    font-size: 9px;
+}
+
+.hobbies li::marker {
+    color: #173b5c;
+}
+
+
+/* =====================================================
+   CONTACT BUTTONS
+===================================================== */
+
+.contact-section {
+    padding-bottom: 35px;
+}
+
+.contact-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.contact-buttons a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background-color: #142440;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 3px;
+
+    font-size: 8px;
+}
+
+
+/* Hover effect */
+
+.contact-buttons a:hover {
+    background-color: #263c60;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media screen and (max-width: 650px) {
+
+    .container {
+        width: 95%;
+    }
+
+
+    /* Header becomes vertical */
+
+    .header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .header-info {
+        margin-left: 0;
+
+        margin-top: 15px;
+    }
+
+
+    .header-buttons {
+        justify-content: center;
+    }
+
+
+    /* Section spacing */
+
+    .section {
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+
+    /* Personal details */
+
+    .detail-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 7px 0;
+    }
+
+
+    .label {
+        width: 100%;
+
+        margin-bottom: 3px;
+    }
+
+
+    /* Education table */
+
+    .education-table {
+        font-size: 8px;
+    }
+
+    .education-table th,
+    .education-table td {
+        padding: 6px;
+    }
+
+}
