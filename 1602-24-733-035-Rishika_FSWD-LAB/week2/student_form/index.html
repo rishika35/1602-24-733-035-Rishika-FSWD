@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Registration Form</h1>
+
+    <!-- TABS -->
+    <div class="tabs">
+
+        <button type="button"
+                class="tab active"
+                onclick="openTab('personal', this)">
+            Personal Details
+        </button>
+
+        <button type="button"
+                class="tab"
+                onclick="openTab('education', this)">
+            Educational Qualifications
+        </button>
+
+    </div>
+
+
+    <form id="studentForm" novalidate>
+
+
+        <!-- =================================================
+             PERSONAL DETAILS
+             ================================================= -->
+
+        <div id="personal" class="page active">
+
+            <h2>Personal Details</h2>
+
+
+            <!-- ROLL NO + NAME -->
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="rollNo">
+                        Roll Number <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="rollNo"
+                           required>
+
+                    <small id="rollNoError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="name">
+                        Full Name <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="name"
+                           required>
+
+                    <small id="nameError"></small>
+
+                </div>
+
+            </div>
+
+
+            <!-- DOB + AGE -->
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="dob">
+                        Date of Birth <span>*</span>
+                    </label>
+
+                    <input type="date"
+                           id="dob"
+                           required>
+
+                    <small id="dobError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="age">
+                        Age
+                    </label>
+
+                    <input type="number"
+                           id="age"
+                           readonly>
+
+                </div>
+
+            </div>
+
+
+            <!-- GENDER + BLOOD GROUP -->
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label>
+                        Gender <span>*</span>
+                    </label>
+
+                    <div class="radio-group">
+
+                        <label>
+                            <input type="radio"
+                                   name="gender"
+                                   value="Male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                   name="gender"
+                                   value="Female">
+                            Female
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                   name="gender"
+                                   value="Other">
+                            Other
+                        </label>
+
+                    </div>
+
+                    <small id="genderError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="blood">
+                        Blood Group <span>*</span>
+                    </label>
+
+                    <select id="blood">
+
+                        <option value="">
+                            Select Blood Group
+                        </option>
+
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+
+                    </select>
+
+                    <small id="bloodError"></small>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOBILE + EMAIL -->
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="mobile">
+                        Mobile Number <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="mobile"
+                           maxlength="10">
+
+                    <small id="mobileError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="email">
+                        Email ID <span>*</span>
+                    </label>
+
+                    <input type="email"
+                           id="email">
+
+                    <small id="emailError"></small>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="field full">
+
+                <label for="address">
+                    Address <span>*</span>
+                </label>
+
+                <textarea id="address"></textarea>
+
+                <small id="addressError"></small>
+
+            </div>
+
+
+            <!-- PIN CITY STATE -->
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="pincode">
+                        PIN Code <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="pincode"
+                           maxlength="6">
+
+                    <small id="pincodeError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input type="text"
+                           id="city"
+                           readonly>
+
+                    <small id="cityError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="state">
+                        State
+                    </label>
+
+                    <input type="text"
+                           id="state"
+                           readonly>
+
+                    <small id="stateError"></small>
+
+                </div>
+
+            </div>
+
+
+            <p class="note">
+                * Required fields
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             EDUCATIONAL DETAILS
+             ================================================= -->
+
+        <div id="education" class="page">
+
+            <h2>Educational Qualifications</h2>
+
+
+            <!-- 10TH -->
+
+            <h3>10th / SSC Details</h3>
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="school">
+                        School Name <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="school">
+
+                    <small id="schoolError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="sscYear">
+                        Year of Passing <span>*</span>
+                    </label>
+
+                    <select id="sscYear">
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                    </select>
+
+                    <small id="sscYearError"></small>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="sscBoard">
+                        Board <span>*</span>
+                    </label>
+
+                    <select id="sscBoard">
+
+                        <option value="">
+                            Select Board
+                        </option>
+
+                        <option>SSC</option>
+                        <option>CBSE</option>
+                        <option>ICSE</option>
+
+                    </select>
+
+                    <small id="sscBoardError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="sscMarks">
+                        Percentage / CGPA <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="sscMarks">
+
+                    <small id="sscMarksError"></small>
+
+                </div>
+
+            </div>
+
+
+            <!-- 12TH -->
+
+            <h3>12th / Intermediate Details</h3>
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="interCollege">
+                        College Name <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="interCollege">
+
+                    <small id="interCollegeError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="interYear">
+                        Year of Passing <span>*</span>
+                    </label>
+
+                    <select id="interYear">
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                    </select>
+
+                    <small id="interYearError"></small>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="interBoard">
+                        Board <span>*</span>
+                    </label>
+
+                    <select id="interBoard">
+
+                        <option value="">
+                            Select Board
+                        </option>
+
+                        <option>Intermediate</option>
+                        <option>CBSE</option>
+
+                    </select>
+
+                    <small id="interBoardError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="interMarks">
+                        Percentage / CGPA <span>*</span>
+                    </label>
+
+                    <input type="text"
+                           id="interMarks">
+
+                    <small id="interMarksError"></small>
+
+                </div>
+
+            </div>
+
+
+            <!-- CURRENT EDUCATION -->
+
+            <h3>Current Education</h3>
+
+
+            <div class="field full">
+
+                <label for="college">
+                    College / University Name <span>*</span>
+                </label>
+
+                <input type="text"
+                       id="college">
+
+                <small id="collegeError"></small>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="degree">
+                        Degree <span>*</span>
+                    </label>
+
+                    <select id="degree">
+
+                        <option value="">
+                            Select Degree
+                        </option>
+
+                        <option>B.Tech</option>
+                        <option>B.E</option>
+                        <option>B.Sc</option>
+                        <option>BCA</option>
+                        <option>Other</option>
+
+                    </select>
+
+                    <small id="degreeError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="branch">
+                        Branch <span>*</span>
+                    </label>
+
+                    <select id="branch">
+
+                        <option value="">
+                            Select Branch
+                        </option>
+
+                        <option>CSE</option>
+                        <option>IT</option>
+                        <option>ECE</option>
+                        <option>EEE</option>
+                        <option>Mechanical</option>
+                        <option>Civil</option>
+                        <option>Other</option>
+
+                    </select>
+
+                    <small id="branchError"></small>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="admissionYear">
+                        Year of Admission <span>*</span>
+                    </label>
+
+                    <select id="admissionYear">
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                    </select>
+
+                    <small id="admissionYearError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="currentYear">
+                        Current Year <span>*</span>
+                    </label>
+
+                    <select id="currentYear">
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option>1st Year</option>
+                        <option>2nd Year</option>
+                        <option>3rd Year</option>
+                        <option>4th Year</option>
+
+                    </select>
+
+                    <small id="currentYearError"></small>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="semester">
+                        Current Semester <span>*</span>
+                    </label>
+
+                    <select id="semester">
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                        <option>1st Semester</option>
+                        <option>2nd Semester</option>
+                        <option>3rd Semester</option>
+                        <option>4th Semester</option>
+                        <option>5th Semester</option>
+                        <option>6th Semester</option>
+                        <option>7th Semester</option>
+                        <option>8th Semester</option>
+
+                    </select>
+
+                    <small id="semesterError"></small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="cgpa">
+                        Current CGPA <span>*</span>
+                    </label>
+
+                    <input type="number"
+                           id="cgpa"
+                           min="0"
+                           max="10"
+                           step="0.01">
+
+                    <small id="cgpaError"></small>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHECKBOXES -->
+
+            <div class="field full">
+
+                <label>
+                    Areas of Interest <span>*</span>
+                </label>
+
+                <div class="checkbox-group">
+
+                    <label>
+                        <input type="checkbox"
+                               name="interest"
+                               value="Programming">
+                        Programming
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="interest"
+                               value="Web Development">
+                        Web Development
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="interest"
+                               value="Data Science">
+                        Data Science
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="interest"
+                               value="AI / ML">
+                        AI / ML
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="interest"
+                               value="Cyber Security">
+                        Cyber Security
+                    </label>
+
+                </div>
+
+                <small id="interestError"></small>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <div class="button-area">
+
+                <button type="submit"
+                        class="submit-btn">
+
+                    Submit Registration
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </form>
+
+
+    <div id="success"></div>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   TAB FUNCTION
+   ===================================================== */
+
+function openTab(tabName, button) {
+
+    document.querySelectorAll(".page")
+        .forEach(function(page) {
+
+            page.classList.remove("active");
+
+        });
+
+
+    document.querySelectorAll(".tab")
+        .forEach(function(tab) {
+
+            tab.classList.remove("active");
+
+        });
+
+
+    document.getElementById(tabName)
+        .classList.add("active");
+
+    button.classList.add("active");
+
+}
+
+
+/* =====================================================
+   AGE CALCULATION
+   ===================================================== */
+
+document.getElementById("dob")
+.addEventListener("change", function() {
+
+    let dob = this.value;
+
+    let ageBox =
+        document.getElementById("age");
+
+    let error =
+        document.getElementById("dobError");
+
+
+    ageBox.value = "";
+
+    error.textContent = "";
+
+    this.classList.remove("invalid");
+
+
+    if (dob === "") {
+        return;
+    }
+
+
+    let birthDate =
+        new Date(dob + "T00:00:00");
+
+    let today =
+        new Date();
+
+
+    if (birthDate > today) {
+
+        this.classList.add("invalid");
+
+        error.textContent =
+            "Date of birth cannot be in the future.";
+
+        return;
+
+    }
+
+
+    let age =
+        today.getFullYear() -
+        birthDate.getFullYear();
+
+
+    let monthDifference =
+        today.getMonth() -
+        birthDate.getMonth();
+
+
+    if (
+        monthDifference < 0 ||
+        (
+            monthDifference === 0 &&
+            today.getDate() < birthDate.getDate()
+        )
+    ) {
+
+        age--;
+
+    }
+
+
+    if (age < 0) {
+
+        this.classList.add("invalid");
+
+        error.textContent =
+            "Age cannot be negative.";
+
+        return;
+
+    }
+
+
+    ageBox.value = age;
+
+});
+
+
+/* =====================================================
+   PIN CODE
+   AUTOMATIC CITY + STATE
+   ===================================================== */
+
+document.getElementById("pincode")
+.addEventListener("input", function() {
+
+    let pin = this.value;
+
+    let city =
+        document.getElementById("city");
+
+    let state =
+        document.getElementById("state");
+
+    let error =
+        document.getElementById("pincodeError");
+
+
+    /* Allow numbers only */
+
+    this.value =
+        this.value.replace(/\D/g, "");
+
+    pin = this.value;
+
+
+    city.value = "";
+    state.value = "";
+
+    error.textContent = "";
+
+
+    if (pin.length === 0) {
+        return;
+    }
+
+
+    if (pin.length < 6) {
+
+        return;
+
+    }
+
+
+    error.textContent =
+        "Finding location...";
+
+
+    fetch(
+        "https://api.postalpincode.in/pincode/" + pin
+    )
+
+    .then(function(response) {
+
+        return response.json();
+
+    })
+
+    .then(function(data) {
+
+        if (
+            data[0].Status === "Success" &&
+            data[0].PostOffice &&
+            data[0].PostOffice.length > 0
+        ) {
+
+            city.value =
+                data[0].PostOffice[0].District;
+
+            state.value =
+                data[0].PostOffice[0].State;
+
+            error.textContent = "";
+
+            city.classList.add("auto-filled");
+
+            state.classList.add("auto-filled");
+
+        }
+
+        else {
+
+            error.textContent =
+                "Invalid PIN code.";
+
+            document.getElementById("pincode")
+                .classList.add("invalid");
+
+        }
+
+    })
+
+    .catch(function() {
+
+        error.textContent =
+            "Unable to find location.";
+
+    });
+
+});
+
+
+/* =====================================================
+   YEAR DROPDOWNS
+   ===================================================== */
+
+let yearNow =
+    new Date().getFullYear();
+
+
+function addYears(selectId) {
+
+    let select =
+        document.getElementById(selectId);
+
+
+    for (
+        let year = yearNow;
+        year >= 2000;
+        year--
+    ) {
+
+        let option =
+            document.createElement("option");
+
+        option.value = year;
+
+        option.textContent = year;
+
+        select.appendChild(option);
+
+    }
+
+}
+
+
+addYears("sscYear");
+
+addYears("interYear");
+
+addYears("admissionYear");
+
+
+/* =====================================================
+   FORM VALIDATION
+   ===================================================== */
+
+document.getElementById("studentForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    clearErrors();
+
+
+    let valid = true;
+
+    let firstInvalidPage = "personal";
+
+
+    /* ================= PERSONAL ================= */
+
+
+    let personalFields = [
+
+        ["rollNo", "Roll number is required."],
+
+        ["name", "Full name is required."],
+
+        ["dob", "Date of birth is required."],
+
+        ["blood", "Please select blood group."],
+
+        ["mobile", "Mobile number is required."],
+
+        ["email", "Email ID is required."],
+
+        ["address", "Address is required."],
+
+        ["pincode", "PIN code is required."],
+
+        ["city", "Enter a valid PIN code."],
+
+        ["state", "Enter a valid PIN code."]
+
+    ];
+
+
+    personalFields.forEach(function(item) {
+
+        let input =
+            document.getElementById(item[0]);
+
+
+        if (input.value.trim() === "") {
+
+            showError(
+                item[0],
+                item[1]
+            );
+
+            valid = false;
+
+        }
+
+    });
+
+
+    /* GENDER RADIO */
+
+    let gender =
+        document.querySelector(
+            'input[name="gender"]:checked'
+        );
+
+
+    if (!gender) {
+
+        document.getElementById("genderError")
+            .textContent =
+            "Please select gender.";
+
+        valid = false;
+
+    }
+
+
+    /* DOB FUTURE */
+
+    let dob =
+        document.getElementById("dob");
+
+
+    if (
+        dob.value !== "" &&
+        new Date(dob.value + "T00:00:00") > new Date()
+    ) {
+
+        dob.classList.add("invalid");
+
+        document.getElementById("dobError")
+            .textContent =
+            "Date of birth cannot be in the future.";
+
+        valid = false;
+
+    }
+
+
+    /* MOBILE */
+
+    let mobile =
+        document.getElementById("mobile");
+
+
+    if (
+        mobile.value !== "" &&
+        !/^[0-9]{10}$/.test(mobile.value)
+    ) {
+
+        mobile.classList.add("invalid");
+
+        document.getElementById("mobileError")
+            .textContent =
+            "Enter a valid 10-digit mobile number.";
+
+        valid = false;
+
+    }
+
+
+    /* EMAIL */
+
+    let email =
+        document.getElementById("email");
+
+
+    if (
+        email.value !== "" &&
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
+    ) {
+
+        email.classList.add("invalid");
+
+        document.getElementById("emailError")
+            .textContent =
+            "Enter a valid email address.";
+
+        valid = false;
+
+    }
+
+
+    /* PIN */
+
+    let pincode =
+        document.getElementById("pincode");
+
+
+    if (
+        pincode.value !== "" &&
+        !/^[0-9]{6}$/.test(pincode.value)
+    ) {
+
+        pincode.classList.add("invalid");
+
+        document.getElementById("pincodeError")
+            .textContent =
+            "PIN code must contain 6 digits.";
+
+        valid = false;
+
+    }
+
+
+    /* ================= EDUCATION ================= */
+
+
+    let educationFields = [
+
+        ["school", "School name is required."],
+
+        ["sscYear", "Select SSC passing year."],
+
+        ["sscBoard", "Select SSC board."],
+
+        ["sscMarks", "Enter SSC percentage / CGPA."],
+
+        ["interCollege", "College name is required."],
+
+        ["interYear", "Select Intermediate passing year."],
+
+        ["interBoard", "Select Intermediate board."],
+
+        ["interMarks", "Enter Intermediate percentage / CGPA."],
+
+        ["college", "College / University name is required."],
+
+        ["degree", "Select degree."],
+
+        ["branch", "Select branch."],
+
+        ["admissionYear", "Select admission year."],
+
+        ["currentYear", "Select current year."],
+
+        ["semester", "Select semester."],
+
+        ["cgpa", "Enter current CGPA."]
+
+    ];
+
+
+    educationFields.forEach(function(item) {
+
+        let input =
+            document.getElementById(item[0]);
+
+
+        if (input.value.trim() === "") {
+
+            showError(
+                item[0],
+                item[1]
+            );
+
+            valid = false;
+
+            if (firstInvalidPage === "personal") {
+
+                firstInvalidPage = "education";
+
+            }
+
+        }
+
+    });
+
+
+    /* CGPA */
+
+    let cgpa =
+        document.getElementById("cgpa");
+
+
+    if (
+        cgpa.value !== "" &&
+        (
+            Number(cgpa.value) < 0 ||
+            Number(cgpa.value) > 10
+        )
+    ) {
+
+        cgpa.classList.add("invalid");
+
+        document.getElementById("cgpaError")
+            .textContent =
+            "CGPA must be between 0 and 10.";
+
+        valid = false;
+
+        firstInvalidPage = "education";
+
+    }
+
+
+    /* INTEREST CHECKBOX */
+
+    let interests =
+        document.querySelectorAll(
+            'input[name="interest"]:checked'
+        );
+
+
+    if (interests.length === 0) {
+
+        document.getElementById("interestError")
+            .textContent =
+            "Select at least one area of interest.";
+
+        valid = false;
+
+        firstInvalidPage = "education";
+
+    }
+
+
+    /* =================================================
+       IF INVALID
+       ================================================= */
+
+    if (!valid) {
+
+        let button =
+            document.querySelector(
+                '.tab[onclick*="' +
+                firstInvalidPage +
+                '"]'
+            );
+
+
+        if (button) {
+
+            openTab(
+                firstInvalidPage,
+                button
+            );
+
+        }
+
+        return;
+
+    }
+
+
+    /* =================================================
+       SUCCESS
+       ================================================= */
+
+    document.getElementById("success")
+        .textContent =
+        "✓ Registration submitted successfully!";
+
+});
+
+
+/* =====================================================
+   SHOW ERROR
+   ===================================================== */
+
+function showError(id, message) {
+
+    let input =
+        document.getElementById(id);
+
+
+    input.classList.add("invalid");
+
+
+    let error =
+        document.getElementById(id + "Error");
+
+
+    if (error) {
+
+        error.textContent = message;
+
+    }
+
+}
+
+
+/* =====================================================
+   CLEAR ERRORS
+   ===================================================== */
+
+function clearErrors() {
+
+    document.querySelectorAll(
+        "#studentForm input, #studentForm select, #studentForm textarea"
+    )
+    .forEach(function(input) {
+
+        input.classList.remove("invalid");
+
+    });
+
+
+    document.querySelectorAll("small")
+    .forEach(function(error) {
+
+        error.textContent = "";
+
+    });
+
+
+    document.getElementById("success")
+        .textContent = "";
+
+}
+
+</script>
+
+</body>
+
+</html>
