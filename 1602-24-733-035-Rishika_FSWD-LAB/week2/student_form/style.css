@@ -1,0 +1,639 @@
+/* =========================
+   BASIC SETTINGS
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background: #eaf2f8;
+
+    color: #333;
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.container {
+
+    width: 720px;
+
+    max-width: 100%;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.15);
+
+    animation: formOpen 0.7s ease;
+
+}
+
+
+/* =========================
+   MAIN TITLE
+   ========================= */
+
+h1 {
+
+    text-align: center;
+
+    color: #174a7e;
+
+    font-size: 25px;
+
+    margin: 0 0 18px 0;
+
+}
+
+
+h2 {
+
+    color: #174a7e;
+
+    font-size: 19px;
+
+    margin: 5px 0 15px;
+
+    border-bottom: 2px solid #dce6f1;
+
+    padding-bottom: 7px;
+
+}
+
+
+h3 {
+
+    color: #286090;
+
+    font-size: 15px;
+
+    margin: 15px 0 9px;
+
+}
+
+
+/* =========================
+   TABS
+   ========================= */
+
+.tabs {
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.tab {
+
+    flex: 1;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #dce6f1;
+
+    color: #174a7e;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.tab:hover {
+
+    background: #c5d8ea;
+
+    transform: translateY(-2px);
+
+}
+
+
+.tab.active {
+
+    background: #174a7e;
+
+    color: white;
+
+}
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.page {
+
+    display: none;
+
+}
+
+
+.page.active {
+
+    display: block;
+
+    animation: pageAnimation 0.4s ease;
+
+}
+
+
+/* =========================
+   ROW
+   ========================= */
+
+.row {
+
+    display: flex;
+
+    gap: 14px;
+
+}
+
+
+/* =========================
+   FIELD
+   ========================= */
+
+.field {
+
+    flex: 1;
+
+    margin-bottom: 10px;
+
+}
+
+
+.full {
+
+    width: 100%;
+
+}
+
+
+/* =========================
+   LABEL
+   ========================= */
+
+label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+}
+
+
+label span {
+
+    color: red;
+
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 8px 9px;
+
+    border: 1px solid #b8c7d9;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    background: white;
+
+    transition: 0.25s;
+
+}
+
+
+textarea {
+
+    height: 55px;
+
+    resize: none;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    outline: none;
+
+    border-color: #286090;
+
+    box-shadow:
+        0 0 5px rgba(40, 96, 144, 0.2);
+
+}
+
+
+/* =========================
+   AGE
+   ========================= */
+
+#age {
+
+    background: #f1f3f5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================
+   RADIO BUTTONS
+   ========================= */
+
+.radio-group {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 8px 0;
+
+}
+
+
+.radio-group label {
+
+    font-weight: normal;
+
+    margin: 0;
+
+    cursor: pointer;
+
+}
+
+
+.radio-group input {
+
+    margin-right: 4px;
+
+}
+
+
+/* =========================
+   CHECKBOXES
+   ========================= */
+
+.checkbox-group {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px 15px;
+
+    padding: 9px;
+
+    border: 1px solid #d5dee8;
+
+    border-radius: 5px;
+
+    background: #f7f9fb;
+
+}
+
+
+.checkbox-group label {
+
+    font-weight: normal;
+
+    margin: 0;
+
+    cursor: pointer;
+
+}
+
+
+.checkbox-group input {
+
+    margin-right: 4px;
+
+}
+
+
+/* =========================
+   ERROR
+   ========================= */
+
+small {
+
+    display: block;
+
+    min-height: 15px;
+
+    color: red;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================
+   INVALID INPUT
+   ========================= */
+
+.invalid {
+
+    border: 2px solid red !important;
+
+    background: #fff4f4 !important;
+
+    animation: shake 0.3s ease;
+
+}
+
+
+/* =========================
+   AUTO FILLED
+   ========================= */
+
+.auto-filled {
+
+    background: #eef8ee !important;
+
+    border-color: #58a65c !important;
+
+    animation: fillAnimation 0.5s ease;
+
+}
+
+
+/* =========================
+   NOTE
+   ========================= */
+
+.note {
+
+    font-size: 11px;
+
+    color: #777;
+
+    margin: 3px 0;
+
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+   ========================= */
+
+.button-area {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+}
+
+
+.submit-btn {
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #174a7e;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.submit-btn:hover {
+
+    background: #286090;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.submit-btn:active {
+
+    transform: scale(0.97);
+
+}
+
+
+/* =========================
+   SUCCESS
+   ========================= */
+
+#success {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    color: green;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes formOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes pageAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+@keyframes shake {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes fillAnimation {
+
+    from {
+
+        opacity: 0.4;
+
+        transform: translateY(5px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width: 650px) {
+
+    body {
+
+        padding: 10px;
+
+    }
+
+
+    .container {
+
+        padding: 15px;
+
+    }
+
+
+    .row {
+
+        display: block;
+
+    }
+
+
+    .tabs {
+
+        display: block;
+
+    }
+
+
+    .tab {
+
+        width: 100%;
+
+        margin-bottom: 5px;
+
+    }
+
+}
