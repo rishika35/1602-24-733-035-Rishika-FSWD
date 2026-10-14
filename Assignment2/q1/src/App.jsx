@@ -4,8 +4,17 @@ import "./App.css";
 
 function App() {
   const names = [
-    "Rishika", "Rahul", "Priya", "Sneha", "Arjun",
-    "Ananya", "Kiran", "Suresh", "Divya", "Vikram"
+    "Rishika",
+    "Priya",
+    "Sneha",
+    "Arjun",
+    "Ananya",
+    "Kiran",
+    "Suresh",
+    "Divya",
+    "Vikram",
+    "Meera",
+    "Nisha",
   ];
 
   const [search, setSearch] = useState("");
@@ -15,23 +24,31 @@ function App() {
   );
 
   return (
-    <div className="container">
-      <h2>Live Search Box</h2>
+    <div className="search-page">
+      <div className="search-card">
+        <h1>Live Search</h1>
+        <p className="subtitle">Search names instantly</p>
 
-      <input
-        type="text"
-        placeholder="Search names..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Type a name..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
 
-      <ul>
-        {filteredNames.map((name) => (
-          <li key={name}>{name}</li>
-        ))}
-      </ul>
-
-      {filteredNames.length === 0 && <p>No names found.</p>}
+        <ul className="name-list">
+          {filteredNames.length > 0 ? (
+            filteredNames.map((name, index) => (
+              <li key={`${name}-${index}`} className="name-item">
+                {name}
+              </li>
+            ))
+          ) : (
+            <li className="empty-state">No names found</li>
+          )}
+        </ul>
+      </div>
     </div>
   );
 }
