@@ -1,1 +1,31 @@
 
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: white;
+  border-radius: 10px;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 8px 0;
+  padding: 10px;
+  background: #e3f2fd;
+  border-radius: 5px;
+}
+
+
